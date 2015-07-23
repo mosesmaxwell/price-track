@@ -4,7 +4,7 @@ angular.module( 'ngstart', [
   'ui.router',
   'ui.bootstrap',
   'ngstart.home',
-  'ngstart.about'
+  'ngstart.bus'
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider ) {

@@ -1,11 +1,10 @@
-angular.module( 'ngStarter', [
+angular.module( 'ngstart', [
   'templates-app',
   'templates-common',
   'ui.router',
-  'nvd3ChartDirectives',
-  'ngStarter.home',
-  'ngStarter.about',
-  'ngStarter.bus'
+  'ui.bootstrap',
+  'ngstart.home',
+  'ngstart.about'
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider ) {
@@ -18,7 +17,7 @@ angular.module( 'ngStarter', [
 .controller( 'AppCtrl', function AppCtrl ( $scope, $location ) {
   $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
     if ( angular.isDefined( toState.data.pageTitle ) ) {
-      $scope.pageTitle = toState.data.pageTitle + ' | ngStarter' ;
+      $scope.pageTitle = toState.data.pageTitle + ' | ngstart' ;
     }
   });
 });

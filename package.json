@@ -1,8 +1,12 @@
 {
   "author": "CTS/MosesMaxwell",
-  "name": "ngstarter",
+  "name": "ngstart",
   "version": "0.0.1",
   "main": "server.js",
+  "licenses": {
+    "type": "",
+    "url": ""
+  },
   "engines": {
     "node": "0.10.x"
   },

@@ -68,13 +68,9 @@ module.exports = {
       'vendor/angular-ui-router/release/angular-ui-router.js',
       'vendor/angular-ui-utils/modules/route/route.js',
       'vendor/jquery/dist/jquery.js',
-      'vendor/jquery-ui/jquery-ui.js',
-      'vendor/d3/d3.js',
-      'vendor/nvd3/nv.d3.js',
-      'vendor/angularjs-nvd3-directives/dist/angularjs-nvd3-directives.js'
+      'vendor/jquery-ui/jquery-ui.js'
     ],
     css: [
-      'vendor/nvd3/nv.d3.css'
     ],
     assets: [
     ]

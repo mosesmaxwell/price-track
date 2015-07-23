@@ -1,7 +1,5 @@
-angular.module( 'ngStarter.about', [
-  'ui.router',
-  'placeholders',
-  'ui.bootstrap'
+angular.module( 'ngstart.about', [
+  'ui.router'
 ])
 
 .config(function config( $stateProvider ) {
@@ -13,7 +11,7 @@ angular.module( 'ngStarter.about', [
         templateUrl: 'about/about.tpl.html'
       }
     },
-    data:{ pageTitle: 'What is It?' }
+    data:{ pageTitle: 'About' }
   });
 })
 

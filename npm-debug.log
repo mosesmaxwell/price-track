@@ -5,9 +5,9 @@
 2 info using npm@1.4.28
 3 info using node@v0.10.33
 4 verbose node symlink C:\Program Files\nodejs\\node.exe
-5 warn package.json ngstarter@0.0.1 No repository field.
+5 warn package.json ngstart@0.0.1 No repository field.
 6 verbose readDependencies using package.json deps
-7 verbose install where, deps [ 'C:\\Users\\301669\\Desktop\\ngstarter',
+7 verbose install where, deps [ 'C:\\Users\\301669\\Desktop\\ng-kit',
 7 verbose install   [ 'express',
 7 verbose install     'grunt-express',
 7 verbose install     'grunt',
@@ -29,100 +29,101 @@
 7 verbose install     'karma-coffee-preprocessor',
 7 verbose install     'karma-firefox-launcher',
 7 verbose install     'karma-jasmine' ] ]
-8 info preinstall ngstarter@0.0.1
-9 verbose readDependencies using package.json deps
-10 verbose already installed skipping express@^4.13.1 C:\Users\301669\Desktop\ngstarter
-11 verbose already installed skipping grunt-express@^1.4.1 C:\Users\301669\Desktop\ngstarter
-12 verbose already installed skipping grunt@~0.4.1 C:\Users\301669\Desktop\ngstarter
-13 verbose already installed skipping grunt-bump@0.0.6 C:\Users\301669\Desktop\ngstarter
-14 verbose already installed skipping grunt-coffeelint@~0.0.10 C:\Users\301669\Desktop\ngstarter
-15 verbose already installed skipping grunt-contrib-clean@^0.4.1 C:\Users\301669\Desktop\ngstarter
-16 verbose already installed skipping grunt-contrib-coffee@^0.7.0 C:\Users\301669\Desktop\ngstarter
-17 verbose already installed skipping grunt-contrib-concat@^0.3.0 C:\Users\301669\Desktop\ngstarter
-18 verbose already installed skipping grunt-contrib-copy@^0.4.1 C:\Users\301669\Desktop\ngstarter
-19 verbose already installed skipping grunt-contrib-jshint@^0.4.3 C:\Users\301669\Desktop\ngstarter
-20 verbose already installed skipping grunt-contrib-less@~0.11.0 C:\Users\301669\Desktop\ngstarter
-21 verbose already installed skipping grunt-contrib-uglify@^0.2.7 C:\Users\301669\Desktop\ngstarter
-22 verbose already installed skipping grunt-contrib-watch@^0.4.4 C:\Users\301669\Desktop\ngstarter
-23 verbose already installed skipping grunt-conventional-changelog@^0.1.2 C:\Users\301669\Desktop\ngstarter
-24 verbose already installed skipping grunt-html2js@^0.1.9 C:\Users\301669\Desktop\ngstarter
-25 verbose already installed skipping grunt-karma@^0.8.2 C:\Users\301669\Desktop\ngstarter
-26 verbose already installed skipping grunt-ng-annotate@^0.8.0 C:\Users\301669\Desktop\ngstarter
-27 verbose already installed skipping karma@^0.12.9 C:\Users\301669\Desktop\ngstarter
-28 verbose already installed skipping karma-coffee-preprocessor@^0.2.1 C:\Users\301669\Desktop\ngstarter
-29 verbose already installed skipping karma-firefox-launcher@^0.1.3 C:\Users\301669\Desktop\ngstarter
-30 verbose already installed skipping karma-jasmine@^0.1.5 C:\Users\301669\Desktop\ngstarter
-31 silly resolved []
-32 info build C:\Users\301669\Desktop\ngstarter
-33 verbose linkStuff [ false, false, false, 'C:\\Users\\301669\\Desktop' ]
-34 info linkStuff ngstarter@0.0.1
-35 verbose linkBins ngstarter@0.0.1
-36 verbose linkMans ngstarter@0.0.1
-37 verbose rebuildBundles ngstarter@0.0.1
-38 verbose rebuildBundles [ '.bin',
-38 verbose rebuildBundles   'coffeelint',
-38 verbose rebuildBundles   'express',
-38 verbose rebuildBundles   'grunt',
-38 verbose rebuildBundles   'grunt-bump',
-38 verbose rebuildBundles   'grunt-coffeelint',
-38 verbose rebuildBundles   'grunt-contrib-clean',
-38 verbose rebuildBundles   'grunt-contrib-coffee',
-38 verbose rebuildBundles   'grunt-contrib-concat',
-38 verbose rebuildBundles   'grunt-contrib-copy',
-38 verbose rebuildBundles   'grunt-contrib-jshint',
-38 verbose rebuildBundles   'grunt-contrib-less',
-38 verbose rebuildBundles   'grunt-contrib-uglify',
-38 verbose rebuildBundles   'grunt-contrib-watch',
-38 verbose rebuildBundles   'grunt-conventional-changelog',
-38 verbose rebuildBundles   'grunt-express',
-38 verbose rebuildBundles   'grunt-html2js',
-38 verbose rebuildBundles   'grunt-karma',
-38 verbose rebuildBundles   'grunt-ng-annotate',
-38 verbose rebuildBundles   'karma',
-38 verbose rebuildBundles   'karma-coffee-preprocessor',
-38 verbose rebuildBundles   'karma-firefox-launcher',
-38 verbose rebuildBundles   'karma-jasmine' ]
-39 verbose rebuild bundle C:\Users\301669\Desktop\ngstarter\node_modules\coffeelint
-40 info build C:\Users\301669\Desktop\ngstarter\node_modules\coffeelint
-41 info preinstall coffeelint@1.10.1
-42 verbose linkStuff [ false,
-42 verbose linkStuff   false,
-42 verbose linkStuff   false,
-42 verbose linkStuff   'C:\\Users\\301669\\Desktop\\ngstarter\\node_modules' ]
-43 info linkStuff coffeelint@1.10.1
-44 verbose linkBins coffeelint@1.10.1
-45 verbose link bins [ { coffeelint: './bin/coffeelint' },
-45 verbose link bins   'C:\\Users\\301669\\Desktop\\ngstarter\\node_modules\\.bin',
-45 verbose link bins   false ]
-46 verbose linkMans coffeelint@1.10.1
-47 verbose rebuildBundles coffeelint@1.10.1
-48 verbose rebuildBundles [ '.bin',
-48 verbose rebuildBundles   'coffee-script',
-48 verbose rebuildBundles   'glob',
-48 verbose rebuildBundles   'ignore',
-48 verbose rebuildBundles   'optimist',
-48 verbose rebuildBundles   'resolve',
-48 verbose rebuildBundles   'strip-json-comments' ]
-49 info install coffeelint@1.10.1
-50 info postinstall coffeelint@1.10.1
-51 info install ngstarter@0.0.1
-52 info postinstall ngstarter@0.0.1
-53 verbose unsafe-perm in lifecycle true
-54 info ngstarter@0.0.1 Failed to exec postinstall script
-55 error ngstarter@0.0.1 postinstall: `bower install && grunt dist`
-55 error Exit status 3
-56 error Failed at the ngstarter@0.0.1 postinstall script.
-56 error This is most likely a problem with the ngstarter package,
-56 error not with npm itself.
-56 error Tell the author that this fails on your system:
-56 error     bower install && grunt dist
-56 error You can get their info via:
-56 error     npm owner ls ngstarter
-56 error There is likely additional logging output above.
-57 error System Windows_NT 6.1.7601
-58 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
-59 error cwd C:\Users\301669\Desktop\ngstarter
-60 error node -v v0.10.33
-61 error npm -v 1.4.28
-62 error code ELIFECYCLE
-63 verbose exit [ 1, true ]
+8 info preinstall ngstart@0.0.1
+9 warn package.json karma-coffee-preprocessor@0.2.1 No README data
+10 verbose readDependencies using package.json deps
+11 verbose already installed skipping express@^4.13.1 C:\Users\301669\Desktop\ng-kit
+12 verbose already installed skipping grunt-express@^1.4.1 C:\Users\301669\Desktop\ng-kit
+13 verbose already installed skipping grunt@~0.4.1 C:\Users\301669\Desktop\ng-kit
+14 verbose already installed skipping grunt-bump@0.0.6 C:\Users\301669\Desktop\ng-kit
+15 verbose already installed skipping grunt-coffeelint@~0.0.10 C:\Users\301669\Desktop\ng-kit
+16 verbose already installed skipping grunt-contrib-clean@^0.4.1 C:\Users\301669\Desktop\ng-kit
+17 verbose already installed skipping grunt-contrib-coffee@^0.7.0 C:\Users\301669\Desktop\ng-kit
+18 verbose already installed skipping grunt-contrib-concat@^0.3.0 C:\Users\301669\Desktop\ng-kit
+19 verbose already installed skipping grunt-contrib-copy@^0.4.1 C:\Users\301669\Desktop\ng-kit
+20 verbose already installed skipping grunt-contrib-jshint@^0.4.3 C:\Users\301669\Desktop\ng-kit
+21 verbose already installed skipping grunt-contrib-less@~0.11.0 C:\Users\301669\Desktop\ng-kit
+22 verbose already installed skipping grunt-contrib-uglify@^0.2.7 C:\Users\301669\Desktop\ng-kit
+23 verbose already installed skipping grunt-contrib-watch@^0.4.4 C:\Users\301669\Desktop\ng-kit
+24 verbose already installed skipping grunt-conventional-changelog@^0.1.2 C:\Users\301669\Desktop\ng-kit
+25 verbose already installed skipping grunt-html2js@^0.1.9 C:\Users\301669\Desktop\ng-kit
+26 verbose already installed skipping grunt-karma@^0.8.2 C:\Users\301669\Desktop\ng-kit
+27 verbose already installed skipping grunt-ng-annotate@^0.8.0 C:\Users\301669\Desktop\ng-kit
+28 verbose already installed skipping karma@^0.12.9 C:\Users\301669\Desktop\ng-kit
+29 verbose already installed skipping karma-coffee-preprocessor@^0.2.1 C:\Users\301669\Desktop\ng-kit
+30 verbose already installed skipping karma-firefox-launcher@^0.1.3 C:\Users\301669\Desktop\ng-kit
+31 verbose already installed skipping karma-jasmine@^0.1.5 C:\Users\301669\Desktop\ng-kit
+32 silly resolved []
+33 info build C:\Users\301669\Desktop\ng-kit
+34 verbose linkStuff [ false, false, false, 'C:\\Users\\301669\\Desktop' ]
+35 info linkStuff ngstart@0.0.1
+36 verbose linkBins ngstart@0.0.1
+37 verbose linkMans ngstart@0.0.1
+38 verbose rebuildBundles ngstart@0.0.1
+39 verbose rebuildBundles [ '.bin',
+39 verbose rebuildBundles   'coffeelint',
+39 verbose rebuildBundles   'express',
+39 verbose rebuildBundles   'grunt',
+39 verbose rebuildBundles   'grunt-bump',
+39 verbose rebuildBundles   'grunt-coffeelint',
+39 verbose rebuildBundles   'grunt-contrib-clean',
+39 verbose rebuildBundles   'grunt-contrib-coffee',
+39 verbose rebuildBundles   'grunt-contrib-concat',
+39 verbose rebuildBundles   'grunt-contrib-copy',
+39 verbose rebuildBundles   'grunt-contrib-jshint',
+39 verbose rebuildBundles   'grunt-contrib-less',
+39 verbose rebuildBundles   'grunt-contrib-uglify',
+39 verbose rebuildBundles   'grunt-contrib-watch',
+39 verbose rebuildBundles   'grunt-conventional-changelog',
+39 verbose rebuildBundles   'grunt-express',
+39 verbose rebuildBundles   'grunt-html2js',
+39 verbose rebuildBundles   'grunt-karma',
+39 verbose rebuildBundles   'grunt-ng-annotate',
+39 verbose rebuildBundles   'karma',
+39 verbose rebuildBundles   'karma-coffee-preprocessor',
+39 verbose rebuildBundles   'karma-firefox-launcher',
+39 verbose rebuildBundles   'karma-jasmine' ]
+40 verbose rebuild bundle C:\Users\301669\Desktop\ng-kit\node_modules\coffeelint
+41 info build C:\Users\301669\Desktop\ng-kit\node_modules\coffeelint
+42 info preinstall coffeelint@1.10.1
+43 verbose linkStuff [ false,
+43 verbose linkStuff   false,
+43 verbose linkStuff   false,
+43 verbose linkStuff   'C:\\Users\\301669\\Desktop\\ng-kit\\node_modules' ]
+44 info linkStuff coffeelint@1.10.1
+45 verbose linkBins coffeelint@1.10.1
+46 verbose link bins [ { coffeelint: './bin/coffeelint' },
+46 verbose link bins   'C:\\Users\\301669\\Desktop\\ng-kit\\node_modules\\.bin',
+46 verbose link bins   false ]
+47 verbose linkMans coffeelint@1.10.1
+48 verbose rebuildBundles coffeelint@1.10.1
+49 verbose rebuildBundles [ '.bin',
+49 verbose rebuildBundles   'coffee-script',
+49 verbose rebuildBundles   'glob',
+49 verbose rebuildBundles   'ignore',
+49 verbose rebuildBundles   'optimist',
+49 verbose rebuildBundles   'resolve',
+49 verbose rebuildBundles   'strip-json-comments' ]
+50 info install coffeelint@1.10.1
+51 info postinstall coffeelint@1.10.1
+52 info install ngstart@0.0.1
+53 info postinstall ngstart@0.0.1
+54 verbose unsafe-perm in lifecycle true
+55 info ngstart@0.0.1 Failed to exec postinstall script
+56 error ngstart@0.0.1 postinstall: `bower install && grunt dist`
+56 error Exit status 4
+57 error Failed at the ngstart@0.0.1 postinstall script.
+57 error This is most likely a problem with the ngstart package,
+57 error not with npm itself.
+57 error Tell the author that this fails on your system:
+57 error     bower install && grunt dist
+57 error You can get their info via:
+57 error     npm owner ls ngstart
+57 error There is likely additional logging output above.
+58 error System Windows_NT 6.1.7601
+59 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+60 error cwd C:\Users\301669\Desktop\ng-kit
+61 error node -v v0.10.33
+62 error npm -v 1.4.28
+63 error code ELIFECYCLE
+64 verbose exit [ 1, true ]

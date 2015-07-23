@@ -228,15 +228,18 @@ module.exports = function ( grunt ) {
      * to code without the array syntax.
      */
     ngAnnotate: {
-      compile: {
-        files: [
-          {
-            src: [ '<%= app_files.js %>' ],
-            cwd: '<%= build_dir %>',
-            dest: '<%= build_dir %>',
-            expand: true
-          }
-        ]
+      options: {
+          singleQuotes: true
+      },
+      build: {
+          files: [
+              {
+                  src: ['<%= app_files.js %>'],
+                  cwd: '<%= build_dir %>',
+                  dest: '<%= build_dir %>',
+                  expand: true
+              }
+          ]
       }
     },
 
@@ -575,6 +578,7 @@ module.exports = function ( grunt ) {
   grunt.renameTask( 'watch', 'delta' );
   grunt.registerTask( 'watch', [ 'build', 'karma:unit', 'express', 'delta' ] );
 
+  grunt.registerTask('dist', ['build-min', 'compile']);
   /**
    * The default task is to build and compile.
    */
@@ -586,9 +590,16 @@ module.exports = function ( grunt ) {
   grunt.registerTask( 'build', [
     'clean', 'html2js', 'jshint', 'coffeelint', 'coffee', 'less:build',
     'concat:build_css', 'copy:build_app_assets', 'copy:build_vendor_assets',
-    'copy:build_appjs', 'copy:build_vendorjs', 'copy:build_vendorcss', 'index:build', 'karmaconfig',
+    'copy:build_appjs', 'copy:build_vendorjs', 'copy:build_vendorcss', 'ngAnnotate:build', 'index:build', 'karmaconfig',
     'karma:continuous' 
   ]);
+
+  // The 'build' task gets your app ready to run for development and testing.
+  grunt.registerTask('build-min', [
+      'clean', 'html2js', 'less:build',
+      'concat:build_css', 'copy:build_app_assets', 'copy:build_vendor_assets',
+      'copy:build_appjs', 'copy:build_vendorjs', 'copy:build_vendorcss', 'ngAnnotate:build', 'index:build'
+  ]);  
 
   /**
    * The `compile` task gets your app ready for deployment by concatenating and

@@ -4,8 +4,8 @@
  * build process will exclude all `.spec.js` files from the build
  * automatically.
  */
-describe( 'home section', function() {
-  beforeEach( module( 'ngstart.home' ) );
+describe( 'dashboard section', function() {
+  beforeEach( module( 'gpt.dashboard' ) );
 
   it( 'should have a dummy test', inject( function() {
     expect( true ).toBeTruthy();

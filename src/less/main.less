@@ -1,17 +1,9 @@
 /**
- * This is the main application stylesheet. It should include or import all
- * stylesheets used throughout the application as this is the only stylesheet in
- * the Grunt configuration that is automatically processed.
- */
-
-
-/**
  * First, we include the Twitter Bootstrap LESS files. Only the ones used in the
  * project should be imported as the rest are just wasting space.
  */
 
 @import '../../vendor/bootstrap/less/bootstrap.less';
-
 
 /**
  * This is our main variables file. We must include it last so we can overwrite any variable
@@ -25,57 +17,28 @@
  */
 
 @font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Roboto Regular'), local('Roboto-Regular'), url(fonts/Roboto-Regular.woff) format('woff');
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto Regular'), local('Roboto-Regular'), url(fonts/Roboto-Regular.woff) format('woff');
 }
 
-h2 {
-  margin: 20px 0;
+.header {
+    .brand-icon {
+      font-size: 20px;
+      font-weight: bold;
+      -ms-transform: rotate(-7deg);
+      -webkit-transform: rotate(-7deg);
+      transform: rotate(-7deg);
+    }
+    .brand-title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .custom-navlinks {
+      font-size: 12px;
+    }
 }
-
-
-/**
- * Navigation
- */
-
-.navbar {
-  small {
-    font-size: 60%;
-  }
-}
-
-.custom-navbar .fa {font-size:25px}
-
-@media (max-width:767px) { 
-  .custom-navbar .navbar-right {
-      float: right;
-      padding-right: 15px;
-  }
-  .custom-navbar .nav.navbar-nav.navbar-right li {
-      float: right;
-  }
-    .custom-navbar .nav.navbar-nav.navbar-right li > a {
-      padding:8px 5px;
-  }
-  .custom-navbar .navbar-toggle {
-      float: left
-  }
-  .custom-navbar .navbar-header {
-      float: left;
-      width: auto!important;
-  }
-  .custom-navbar .navbar-collapse {
-      clear: both;
-      float: none;
-  }
-}
-
-
-/**
- * Footer
- */
 
 .footer {
   margin-top: 50px;
@@ -84,37 +47,7 @@ h2 {
     padding: 40px 0;
     border-top: 1px solid #DDD;
   }
-
-  .social {
-    float: right;
-    margin: 0;
-    list-style: none;
-
-    li {
-      float: left;
-      margin-left: 20px;
-
-      a, a:visited {
-        color: @gray-light;
-        text-decoration: none;
-        font-size: 40px;
-        .transition( 250ms ease-in-out );
-
-        &:hover {
-          color: @gray;
-        }
-      }
-    }
-  }
 }
 
-
-/**
- * Now that all app-wide styles have been applied, we can load the styles for
- * all the submodules and components we are using. 
- *
- * TODO: In a later version of this boilerplate, I'd like to automate this.
- */
-
-@import '../app/home/home.less';
+@import '../app/dashboard/dashboard.less';
 

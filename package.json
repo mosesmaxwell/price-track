@@ -1,11 +1,11 @@
 {
   "author": "CTS/MosesMaxwell",
-  "name": "ngstart",
+  "name": "gpt",
   "version": "0.0.1",
   "main": "server.js",
   "licenses": {
-    "type": "Open",
-    "url": "https://github.com/mosesmaxwell/ngstarter"
+    "type": "",
+    "url": ""
   },
   "engines": {
     "node": "0.10.x"

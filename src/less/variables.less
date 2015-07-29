@@ -7,5 +7,36 @@
  * Typography-related.
  */
 
-@brand-primary: darken(#428bca, 6.5%); // #337ab7
+// Navbar
+// -------------------------
+
+// Basics of a navbar
+@navbar-height:                    50px;
+@navbar-margin-bottom:             @line-height-computed;
+@navbar-default-color:             #FFF;
+@navbar-default-bg:                #32CD32;
+@navbar-default-border:            darken(@navbar-default-bg, 6.5%);
+@navbar-border-radius:             @border-radius-base;
+@navbar-padding-horizontal:        floor(@grid-gutter-width / 2);
+@navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
+
+// Navbar links
+@navbar-default-link-color:                #FFF;
+@navbar-default-link-hover-color:          #FFF;
+@navbar-default-link-hover-bg:             transparent;
+@navbar-default-link-active-color:         #FFF;
+@navbar-default-link-active-bg:            transparent;
+@navbar-default-link-disabled-color:       #ccc;
+@navbar-default-link-disabled-bg:          transparent;
+
+// Navbar brand label
+@navbar-default-brand-color:               @navbar-default-link-color;
+@navbar-default-brand-hover-color:         darken(@navbar-default-link-color, 5%);
+@navbar-default-brand-hover-bg:            transparent;
+
+// Navbar toggle
+@navbar-default-toggle-hover-bg:           #FFF;
+@navbar-default-toggle-icon-bar-bg:        #FFF;
+@navbar-default-toggle-border-color:       #FFF;
+
 

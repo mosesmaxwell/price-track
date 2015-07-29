@@ -1,23 +1,24 @@
-angular.module( 'ngstart', [
+angular.module( 'gpt', [
   'templates-app',
   'templates-common',
   'ui.router',
   'ui.bootstrap',
-  'ngstart.home',
-  'ngstart.bus'
+  'gpt.dashboard',
+  'gpt.about'
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider ) {
-  $urlRouterProvider.otherwise( '/home' );
+  $urlRouterProvider.otherwise( '/dashboard' );
 })
 
 .run( function run () {
 })
 
 .controller( 'AppCtrl', function AppCtrl ( $scope, $location ) {
+  $scope.title = 'Pricetrack';
   $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
     if ( angular.isDefined( toState.data.pageTitle ) ) {
-      $scope.pageTitle = toState.data.pageTitle + ' | ngstart' ;
+      $scope.pageTitle = toState.data.pageTitle + ' | Price Tracker';
     }
   });
 });

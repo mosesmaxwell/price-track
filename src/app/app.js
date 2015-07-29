@@ -4,7 +4,9 @@ angular.module( 'gpt', [
   'ui.router',
   'ui.bootstrap',
   'gpt.dashboard',
-  'gpt.about'
+  'gpt.about',
+  'gpt.login',
+  'gpt.signup'
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider ) {

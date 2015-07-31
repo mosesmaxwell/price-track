@@ -1,4 +1,7 @@
 angular.module( 'gpt', [
+  'ngAnimate',
+  'ngTouch',
+  'ngResource',
   'templates-app',
   'templates-common',
   'ui.router',

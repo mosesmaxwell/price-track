@@ -13,8 +13,8 @@
     <script type="text/javascript" src="<%= file %>"></script><% }); %>
 
   </head>
-  <body>
-    <header class="header">
+  <body class="forward">
+    <div class="header">
         <nav class="navbar navbar-default navbar-static-top custom-navbar" role="navigation">
           <div class="container-fluid">
             <button type="button" class="navbar-toggle collapsed" ng-init="menuCollapsed = true"
@@ -42,18 +42,22 @@
           </div>
           <!--/.container -->
         </nav>
-    </header>
-
-    <div class="container">
-      <div class="place-animation" ui-view="main"></div>
     </div>
 
-    <footer class="footer">
+    <div layout="row">
+      <div class="side-navbar">
+      </div>
+      <div class="container-fluid">
+        <div ui-view="main" class="slide-animation" layout-padding></div>
+      </div>
+    </div>
+
+    <div class="footer">
       <div class="container-fluid">
         <div class="footer-inner">
           <p class="text-center">&copy; Copyright</p>
         </div>
       </div>
-    </footer>
+    </div>
   </body>
 </html>

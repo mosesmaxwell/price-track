@@ -63,6 +63,8 @@ module.exports = {
   vendor_files: {
     js: [
       'vendor/angular/angular.js',
+      'vendor/angular-material/angular-material.js',
+      'vendor/angular-aria/angular-aria.js',
       'vendor/angular-animate/angular-animate.js',
       'vendor/angular-bootstrap/ui-bootstrap-tpls.js',
       'vendor/angular-mocks/angular-mocks.js',

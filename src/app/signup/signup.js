@@ -17,5 +17,5 @@ angular.module( 'gpt.signup', [
 
 .controller( 'signupCtrl', function signupCtrl( $scope ) {
   // This is simple a demo for UI Boostrap.
-
+  $scope.user = {};
 });

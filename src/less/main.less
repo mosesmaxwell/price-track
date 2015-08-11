@@ -19,27 +19,23 @@
  * Typography
  */
 
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Roboto Regular'), local('Roboto-Regular'), url(fonts/Roboto-Regular.woff) format('woff');
-}
+ body {
+  font-family: @font-face;
+  font-size: @font-size;
+ }
 
 .header {
     .navbar {
       margin-bottom: 0px;
     }
     .brand-icon {
-      font-size: 20px;
-      font-weight: bold;
-      -ms-transform: rotate(-7deg);
-      -webkit-transform: rotate(-7deg);
-      transform: rotate(-7deg);
+      font-size: 17px;
+      margin-right: -4px;
     }
     .brand-title {
-      font-size: 20px;
-      font-weight: bold;
+      font-family: tahoma;
+      margin-left: 0;
+      font-size: 18px;
     }
     .custom-navlinks {
       font-size: 12px;
@@ -57,8 +53,11 @@
 .side-navbar {
   min-width: 50px;
   width: 20%;
+  min-height: 400px;
   border-right: 1px solid lightgray;
+  background-color: #FEFEFE;
 }
 
 @import '../app/dashboard/dashboard.less';
-
+@import '../app/login/login.less';
+@import '../app/signup/signup.less';

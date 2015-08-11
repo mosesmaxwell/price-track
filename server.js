@@ -7,6 +7,7 @@ if (process.argv.length > 2) {
 if (publicDir == 'watch') {
     publicDir = 'build';
 }
+var dbUrl = 'mongodb://bluemongo:bluedb123@ds033163.mongolab.com:33163/maxwell';
 
 require('events').EventEmitter.prototype._maxListeners = 50;
 var express = require('express');

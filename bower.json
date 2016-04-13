@@ -2,7 +2,7 @@
   "name": "gpt",
   "version": "0.0.1",
   "_comment": "Any dependencies added here require a manual edit to vendor_files in /Gruntfile.js and (??? verify the following) /build/karma-unit.js (e.g 'vendor/angular-resource/angular-resource.js')",
-  "devDependencies": {
+  "dependencies": {
     "angular": "latest",
     "angular-mocks": "latest",
     "angular-touch": "latest",
@@ -15,5 +15,5 @@
     "jquery": "latest",
     "angular-ui-utils": "latest"
   },
-  "dependencies": {}
+  "devDependencies": {}
 }

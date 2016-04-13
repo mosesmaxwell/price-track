@@ -7,7 +7,17 @@ if (process.argv.length > 2) {
 if (publicDir == 'watch') {
     publicDir = 'build';
 }
-var dbUrl = 'mongodb://bluemongo:bluedb123@ds033163.mongolab.com:33163/maxwell';
+
+//Connection to Mongodb using mongoose
+var mongoose = require('mongoose');
+var dbUrl = 'mongodb://mongoosedb:joan123@ds033123.mlab.com:33123/maxwell';
+mongoose.connect(dbUrl);
+
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function callback () {
+  console.log("Mongodb connection established!");
+});
 
 require('events').EventEmitter.prototype._maxListeners = 50;
 var express = require('express');

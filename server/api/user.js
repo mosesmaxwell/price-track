@@ -24,4 +24,7 @@ function getUser(req, res)
 // public api
 module.exports = function (app) {
     app.post('/server/api/user', createUser);
+    app.get('/server/api/user', function(req, res){
+      res.send('reachable to api user inside the server');
+    });
 }

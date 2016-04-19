@@ -1,26 +1,39 @@
 "use strict";
 var mongoose = require("mongoose");
+var bodyparser = require('body-parser');
 var userSchema = require("../models/user.js");
 
-//Model name, schema, collection name
-var User = mongoose.model('User', userSchema, 'users');
-
-var newuser = new User({profile: {username: 'mosesmaxwell@gmail.com', email: 'mosesmaxwell@gmail.com', password: 'welcome'}});
-
 function createUser(req, res) {
-    var user = new User({profile: req.body});
+  //Model name, schema, collection name
+  var User = mongoose.model('User', userSchema, 'users');
+  var user = new User({profile: req.body.data});
     user.save(function(error) {
       if (error) {
-        return res.json({request: req.body});
+        res.json({error: error});
         process.exit(1);
       }
     });
 }
 
+function getUser(req, res) {
+  res.send('reachable to api user inside the server');
+}
+
 // public api
 module.exports = function (app) {
+    app.use(bodyparser.json());
+    
     app.post('/server/api/user', createUser);
-    app.get('/server/api/user', function(req, res){
-      res.send('reachable to api user inside the server');
-    });
+    app.get('/server/api/user', getUser);
+    /*
+    var User = mongoose.model('User', userSchema, 'users');
+    var user = new User({profile: {username: 'moses@gmail.com', email: 'moses@gmail.com', password: 'welcome'}});
+    
+    user.save(function(error) {
+      if (error) {
+        console.log(error);
+        process.exit(1);
+      }
+    });  
+    */
 }

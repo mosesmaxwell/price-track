@@ -25,6 +25,8 @@ db.once('open', function callback () {
   console.log("Mongodb connection established!");
   //Include all api files
   var user = require('./server/api/user.js')(app);
+  //user();
+  
   app.use(express.static(__dirname + "/" + publicDir));
   app.set('port', (process.env.PORT || 5000));
   app.listen(app.get('port'), function () {

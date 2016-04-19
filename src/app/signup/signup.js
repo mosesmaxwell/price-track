@@ -28,12 +28,13 @@ angular.module( 'gpt.signup', [
   $scope.user = {};
   $scope.result = '';
   $scope.save = function() {
+    $scope.user.username = $scope.user.email;
     $http.post('/server/api/user', $scope.user).
     success(function(data, status, headers, config) {
-      $scope.result = data;
+      console.log(data, status, headers, config);
     }).
     error(function(data, status, headers, config) {
-      $scope.result = data;
+      console.log(data, status, headers, config);
     });
   };
 });

@@ -9,15 +9,10 @@ function createUser(req, res) {
     var user = new User({profile: req.body});
     user.save(function(error) {
       if (error) {
-        return res.json({error: error});
+        return res.json({error: error, request: req.body});
         process.exit(1);
       }
     });
-}
-
-function getUser(req, res)
-{
-  return res.send('Reachable!');
 }
 
 // public api

@@ -7,7 +7,7 @@ var User = mongoose.model('User', userSchema, 'users');
 
 function createUser(req, res) {
     console.log('Create new user', req);
-    var user = new User(req);
+    var user = new User(req.body);
     user.save(function(error) {
       if (error) {
         console.log(error);

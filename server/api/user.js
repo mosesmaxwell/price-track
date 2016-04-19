@@ -4,10 +4,16 @@ var bodyparser = require('body-parser');
 var userSchema = require("../models/user.js");
 
 function createUser(req, res) {
+  
+  var userData = {
+      username: req.body.username,
+      password: req.body.password,
+      email: req.body.email
+  };  
   //Model name, schema, collection name
   var User = mongoose.model('User', userSchema, 'users');
-  var user = new User({profile: req.body.data});
-    user.save(function(error) {
+  var user = new User();
+    user.save(userData, function(error) {
       if (error) {
         res.json({error: error});
         process.exit(1);

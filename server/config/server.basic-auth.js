@@ -17,7 +17,6 @@ var users = [
             "password": "Welcome"
         }
     ];
-    
 // remap for better performance
 var whitelist = {};
 users.forEach(function (v) {

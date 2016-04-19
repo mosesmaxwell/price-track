@@ -1,6 +1,7 @@
 //Node Server written in ExpressJS
 'use strict';
 var fs = require('fs');
+
 var publicDir = 'bin';
 if (process.argv.length > 2) {
     publicDir = process.argv[2];
@@ -8,8 +9,6 @@ if (process.argv.length > 2) {
 if (publicDir == 'watch') {
     publicDir = 'build';
 }
-
-var serverBasicAuth = require('./server.basic-auth.js');
 
 require('events').EventEmitter.prototype._maxListeners = 50;
 var express = require('express');
@@ -24,9 +23,10 @@ var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback () {
   console.log("Mongodb connection established!");
-  app.use(express.static(__dirname + "/" + publicDir));
-  app.use(serverBasicAuth);
+  //Include all api files
+  var user = require('./server/api/user.js')(app);
   
+  app.use(express.static(__dirname + "/" + publicDir));
   app.set('port', (process.env.PORT || 5000));
   app.listen(app.get('port'), function () {
       console.log("Node app is running at localhost:" + app.get('port'));

@@ -30,6 +30,7 @@
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
     "grunt-express": "^1.4.1",
+    "http-status": "^0.2.1",
     "mongodb": "^2.0.39",
     "mongoose": "^4.4.12",
     "wagner-core": "^0.2.0"

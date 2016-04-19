@@ -9,7 +9,7 @@ if (publicDir == 'watch') {
     publicDir = 'build';
 }
 
-var serverBasicAuth = require('./server/config/server.basic-auth.js');
+var serverBasicAuth = require('./server.basic-auth.js');
 
 require('events').EventEmitter.prototype._maxListeners = 50;
 var express = require('express');

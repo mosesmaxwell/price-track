@@ -27,7 +27,7 @@ var auth = require('basic-auth');
 module.exports = function (req, res, next) {
     var user = auth(req);
     if (!user || !whitelist[user.name] || whitelist[user.name].password !== user.password) {
-        res.set('WWW-Authenticate', 'Basic realm="Simplification"');
+        res.set('WWW-Authenticate', 'Basic realm="PriceTrack"');
         return res.status(401).send("Contact mosesmaxwell|<i>at</i>|gmail|<i>dot</i>|com to request access.");
     }
     return next();

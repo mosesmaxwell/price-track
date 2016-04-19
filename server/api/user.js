@@ -5,11 +5,13 @@ var userSchema = require("../models/user.js");
 //Model name, schema, collection name
 var User = mongoose.model('User', userSchema, 'users');
 
+var newuser = new User({profile: {username: 'mosesmaxwell@gmail.com', email: 'mosesmaxwell@gmail.com', password: 'welcome'}});
+
 function createUser(req, res) {
     var user = new User({profile: req.body});
     user.save(function(error) {
       if (error) {
-        return res.json({error: error, request: req.body});
+        return res.json({request: req.body});
         process.exit(1);
       }
     });

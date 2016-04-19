@@ -26,6 +26,11 @@ db.once('open', function callback () {
   //Include all api files
   var user = require('./server/api/user.js')(app);
   
+  app.get('/server/api/user', function(req, res){
+      res.send('reachable to api user');
+  });
+  
+  
   app.use(express.static(__dirname + "/" + publicDir));
   app.set('port', (process.env.PORT || 5000));
   app.listen(app.get('port'), function () {

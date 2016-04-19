@@ -18,11 +18,10 @@ function createUser(req, res) {
 
 function getUser(req, res)
 {
-  return res.json({message: 'Yes Reachable in Get!', req: req});
+  return res.send('Reachable!');
 }
 
 // public api
 module.exports = function (app) {
     app.post('/server/api/user', createUser);
-    app.get('/server/api/user', getUser);
 }

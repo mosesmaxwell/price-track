@@ -10,14 +10,19 @@ function createUser(req, res) {
     var user = new User(req.body);
     user.save(function(error) {
       if (error) {
-        console.log(error);
-        return res.json({ user: user });
+        return res.json({error: error});
         process.exit(1);
       }
     });
 }
 
+function getUser(req, res)
+{
+  return res.json({message: 'Yes Reachable in Get!', req: req});
+}
+
 // public api
 module.exports = function (app) {
     app.post('/server/api/user', createUser);
+    app.get('/server/api/user', getUser);
 }

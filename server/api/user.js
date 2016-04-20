@@ -6,6 +6,7 @@ var userSchema = require("../models/user.js");
 
 function createUser(req, res, next) {
   
+  console.log('Create user get called!');
   var userData = {
       username: req.body.username,
       password: req.body.password,
@@ -16,6 +17,7 @@ function createUser(req, res, next) {
   var User = mongoose.model('User', userSchema, 'users');
   var user = new User();
   user.save(userData, function(error) {
+    console.log('save user get called!');
     if (error) {
       return errorHelper(error, next);
     }

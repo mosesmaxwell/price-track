@@ -1,18 +1,19 @@
 "use strict";
 var mongoose = require("mongoose");
 var bodyparser = require('body-parser');
+var errorHelper = require('mongoose-error-helper').errorHelper;
 var userSchema = require("../models/user.js");
 
-function createUser(req, res) {
+function createUser(req, res, next) {
   
-  console.log('Create user fn: ', req.body);
+  console.log('Request DataView: ', req.body);
   
   var userData = {
       username: req.body.username,
       password: req.body.password,
       email: req.body.email
   };  
-  console.log(userData);
+  console.log('Formatted User Data: ', userData);
   //Model name, schema, collection name
   var User = mongoose.model('User', userSchema, 'users');
 
@@ -21,8 +22,7 @@ function createUser(req, res) {
     user.save(userData, function(error) {
       console.log('user.save data called', error);
       if (error) {
-        res.json({error: error});
-        process.exit(1);
+        return errorHelper(error, next);
       }
     });
 }

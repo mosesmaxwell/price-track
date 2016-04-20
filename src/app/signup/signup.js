@@ -33,11 +33,10 @@ angular.module( 'gpt.signup', [
     $scope.user.username = $scope.user.email;
     $http.post('/server/api/user', $scope.user).
     success(function(data, status, headers, config) {
-      //console.log(data, status, headers, config);
       $scope.result = 'Signup Success!';
+       $scope.user = {};
     }).
     error(function(data, status, headers, config) {
-      //console.log(data, status, headers, config);
       $scope.result = 'Signup Error! '+JSON.stringify(data);
     });
   };

@@ -3,16 +3,12 @@ var mongoose = require("mongoose");
 
 module.exports = new mongoose.Schema({
     username: {
-        type: String,
-        lowercase: true
+        type: String
     },
     password: {
-        type: String,
-        lowercase: true
+        type: String
     },
     email: {
-        type: String,
-        lowercase: true,
-        match: /.+@.+\..+/
+        type: String
     }
 });

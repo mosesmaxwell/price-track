@@ -17,6 +17,7 @@ angular.module( 'gpt.signup', [
 
 .controller( 'signupCtrl', function signupCtrl( $scope, $http ) {
   // This is simple a demo for UI Boostrap.
+  /*
   $http.get('/server/api/user').
     success(function(data, status, headers, config) {
       console.log(data, status, headers, config);
@@ -24,6 +25,7 @@ angular.module( 'gpt.signup', [
     error(function(data, status, headers, config) {
       console.log(data, status, headers, config);
     });
+    */
     
   $scope.user = {};
   $scope.result = '';
@@ -31,10 +33,12 @@ angular.module( 'gpt.signup', [
     $scope.user.username = $scope.user.email;
     $http.post('/server/api/user', $scope.user).
     success(function(data, status, headers, config) {
-      console.log(data, status, headers, config);
+      //console.log(data, status, headers, config);
+      $scope.result = 'Signup Success!';
     }).
     error(function(data, status, headers, config) {
-      console.log(data, status, headers, config);
+      //console.log(data, status, headers, config);
+      $scope.result = 'Signup Error! '+JSON.stringify(data);
     });
   };
 });

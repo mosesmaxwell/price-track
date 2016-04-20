@@ -21,7 +21,7 @@ function createUser(req, res, next) {
     if (error) {
       return errorHelper(error, next);
     }
-    console.log('user.save data success!', res.status);
+    console.log('user.save data success!');
     return res.json({ user: user });
   });
 }

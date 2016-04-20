@@ -13,9 +13,9 @@ function createUser(req, res, next) {
   //Model name, schema, collection name
   var User = mongoose.model('User', userSchema, 'users');
   var user = new User(userData);
-  user.save(function(error) {
+  user.save(function(error, user) {
     if (error) {
-      console.log('save user error!', error);
+      console.log('save.user error!', error);
       return res.json({ error: error });
     }
     console.log('user.save data success!');

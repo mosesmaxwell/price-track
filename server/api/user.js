@@ -4,6 +4,7 @@ var bodyparser = require('body-parser');
 var errorHelper = require('mongoose-error-helper').errorHelper;
 var userSchema = require("../models/user.js");
 
+//new user signup
 function createUser(req, res, next) {
   var userData = {
       username: req.body.username,
@@ -23,8 +24,8 @@ function createUser(req, res, next) {
   });
 }
 
+//user login
 function getUser(req, res) {
-  res.send('Get method called!');
 }
 
 // public api

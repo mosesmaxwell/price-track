@@ -8,11 +8,11 @@
 		<form ng-submit="login()" class="login-form" name="loginForm">
 			<md-input-container>
 				<label>Email</label>
-				<input ng-model="user.email" type="email">
+				<input ng-model="user.email" type="email" required>
 			</md-input-container>
 			<md-input-container>
 				<label>Password</label>
-				<input ng-model="user.password" type="password">
+				<input ng-model="user.password" type="password" required>
 			</md-input-container>
 			<div layout="row" layout-align="end end">
 				<md-button class="md-raised md-primary" ng-disabled="loginForm.$invalid">Login</md-button>

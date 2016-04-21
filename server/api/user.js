@@ -34,6 +34,6 @@ function getUser(req, res) {
 // public api
 module.exports = function (app) {
     app.use(bodyparser.json());
-    app.post('/server/api/user', createUser);
-    app.get('/server/api/user', getUser);
+    app.post('/api/user', createUser);
+    app.get('/api/user', getUser);
 }

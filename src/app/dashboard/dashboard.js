@@ -30,7 +30,7 @@ angular.module( 'gpt.dashboard', [
         templateUrl: 'dashboard/dashboard.tpl.html'
       }
     },
-    data:{ pageTitle: 'dashboard' }
+    data:{ pageTitle: 'Dashboard' }
   });
 })
 

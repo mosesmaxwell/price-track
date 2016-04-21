@@ -15,7 +15,23 @@ angular.module( 'gpt.login', [
   });
 })
 
-.controller( 'loginCtrl', function loginCtrl( $scope ) {
+.controller( 'loginCtrl', function loginCtrl( $scope, $http ) {
   // This is simple a demo for UI Boostrap.
   $scope.user = {};
+  $scope.result = '';
+  $scope.progress = 0;
+  
+  $scope.login = function() {
+    $scope.progress = 1;
+    $scope.user.username = $scope.user.email;
+    $http.get('/api/auth/login').then(function(res) {
+      if(!res.error) {
+        $scope.result = 'Login Success!';
+        $scope.user = {};
+        return;
+      }
+      return $scope.result = 'Login error!' + JSON.stringify(res);
+    });
+  };
+  
 });

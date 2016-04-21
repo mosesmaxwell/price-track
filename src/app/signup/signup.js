@@ -40,6 +40,7 @@ angular.module( 'gpt.signup', [
       $scope.result = 'Signup Success!';
        $scope.user = {};
        $scope.password = '';
+       $scope.signupForm.$setPristine();
     }).
     error(function(data, status, headers, config) {
       $scope.result = 'Signup Error! '+JSON.stringify(data);

@@ -20,7 +20,7 @@ function createUser(req, res, next) {
       console.log('save.user error!', error);
       return res.
       status(status.BAD_REQUEST).
-      json({ error: error.toString() });
+      json({ error: error });
     }
     console.log('user.save data success!');
     return res.json({ user: user });
@@ -34,6 +34,6 @@ function getUser(req, res) {
 // public api
 module.exports = function (app) {
     app.use(bodyparser.json());
-    app.post('/api/user', createUser);
-    app.get('/api/user', getUser);
+    app.post('/server/api/user', createUser);
+    app.get('/server/api/user', getUser);
 }

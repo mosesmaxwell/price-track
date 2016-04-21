@@ -34,7 +34,7 @@ angular.module( 'gpt.signup', [
   $scope.save = function() {
     $scope.progress = 1;
     $scope.user.username = $scope.user.email;
-    $http.post('/server/api/user', $scope.user).
+    $http.post('/api/user', $scope.user).
     success(function(data, status, headers, config) {
       $scope.progress = 0;
       $scope.result = 'Signup Success!';

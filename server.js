@@ -23,10 +23,13 @@ var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback () {
   console.log("Mongodb connection established!");
-  //Include all api files
-  var user = require('./server/api/user.js')(app);
-  
+
+  //include all api files
+  var api = require("./server/api.js");
+
   app.use(express.static(__dirname + "/" + publicDir));
+  app.use('/api', api);
+  
   app.set('port', (process.env.PORT || 5000));
   app.listen(app.get('port'), function () {
       console.log("Node app is running at localhost:" + app.get('port'));

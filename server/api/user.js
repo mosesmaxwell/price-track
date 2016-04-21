@@ -1,7 +1,8 @@
 "use strict";
 var mongoose = require("mongoose");
 var bodyparser = require('body-parser');
-var errorHelper = require('mongoose-error-helper').errorHelper;
+var status = require('http-status');
+
 var userSchema = require("../models/user.js");
 
 //new user signup
@@ -17,7 +18,9 @@ function createUser(req, res, next) {
   user.save(function(error, user) {
     if (error) {
       console.log('save.user error!', error);
-      return res.json({ error: error });
+      return res.
+      status(status.BAD_REQUEST).
+      json({ error: error.toString() });
     }
     console.log('user.save data success!');
     return res.json({ user: user });
@@ -31,6 +34,6 @@ function getUser(req, res) {
 // public api
 module.exports = function (app) {
     app.use(bodyparser.json());
-    app.post('/server/api/user', createUser);
-    app.get('/server/api/user', getUser);
+    app.post('/api/user', createUser);
+    app.get('/api/user', getUser);
 }

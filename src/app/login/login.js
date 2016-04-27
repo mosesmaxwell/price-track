@@ -24,7 +24,7 @@ angular.module( 'gpt.login', [
   $scope.login = function() {
     $scope.progress = 1;
     $scope.user.username = $scope.user.email;
-    $http.get('/api/auth/login').then(function(res) {
+    $http.post('/api/auth', $scope.user).then(function(res) {
       if(!res.error) {
         $scope.result = 'Login Success!';
         $scope.user = {};

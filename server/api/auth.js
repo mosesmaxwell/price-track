@@ -5,29 +5,32 @@ var status = require('http-status');
 
 var userSchema = require("../models/user.js");
 
-//new user signup
-function loginUser(req, res, next) {
-
+//check user login
+function checkLogin(req, res) {
   //Model name, schema, collection name
   var User = mongoose.model('User', userSchema, 'users');
   User.findOne({ username: req.body.username, password: req.body.password }, function(error, user) {
     if (error) {
-      console.log('user auth error!', error);
       return res.
-      status(status.BAD_REQUEST).
-      json({ error: error });
+        status(status.INTERNAL_SERVER_ERROR).
+        json({ error: error.toString() });
     }
-    console.log('user auth success!');
-    return res.json({ user: user });
+    if (!user) {
+      return res.
+        status(status.NOT_FOUND).
+        json({ error: 'Not found' });
+    }
+    res.json({ user: user });
   });
 }
 
-function logoutUser(req, res, next) {
+//user logout
+function logout(req, res) {
+  
 }
 
 // public api
 module.exports = function (app) {
     app.use(bodyparser.json());
-    app.post('/api/auth/login', loginUser);
-    app.get('/api/auth/logout', logoutUser);
+    app.post('/api/auth', checkLogin);
 }
